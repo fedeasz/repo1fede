@@ -1,0 +1,97 @@
+li{list-style-type: none;padding: 10px;}
+a{text decoration: none}
+.p-50{padding: 50px;}
+.padB-20{padding-top: 20px;}
+.padT-20{padding-bottom: 20px;}
+.m-50{margin: 50px}
+.bgPrimario{background-color: skyblue;}
+.bgSecundario{background-color: lightblue;}
+
+
+
+.gridIndex{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+	grid-template-columns: 100%;
+	grid template grid-auto-rows: auto auto auto;
+}
+header{ grid-area: header;
+}
+main{ grid-area:main ;
+}
+footer{ grid-area:footer;
+}
+.gridMain{
+	display: grid;
+	grid-template-areas:
+	"encabezado encabezado"
+	"imgprinci texto";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+}
+.encabezado{grid-area: encabezado; text-align: center;}
+.imgprinci{grid-area: imgprinci;}
+.texto{grid-area: texto;}
+
+header,ul,footer{display: flex;}
+.gridIndex footer{justify-content: space-around;}
+
+.imgprinci img{width: 100%;}
+
+@media only screen and (mox-width: 768px){
+	.gridIndex{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+	grid-template-columns: 100%;
+	grid template grid-auto-rows: auto auto auto;}
+	header, footer{flex-direction:column;}
+	li{padding: 5px}
+	ul{padding: 0;}
+	.gridMain{ display:flex;flex-direction: column;
+	}
+}
+
+.gridGaleria{
+	display: grid;
+	grid-template-areas:
+	"logo nav nav"
+	"encabezado encabezado encabezado"
+	"imgMainCuadradaIzq imgMainCuadradaDer imagenVertical"
+	"imgMainHorizontal imgMainHorizontal imagenVertical"
+	"footer footer footer";
+	grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto auto auto;
+}
+.logo{grid-area: logo;}
+nav{grid-area:nav ;}
+.imgMainCuadradaIzq{grid-area:imgMainCuadradaIzq;}
+.imgMainCuadradaDer{grid-area: imgMainCuadradaDer}
+.imagenVerticar{grid-area: imagenVertical}
+.imgMainHotizontal{grid-area: imgMainHotizontal}
+.imgMainCuadradaIzq img, .imgMainCuadradaDer img,.imagenVerticar img,.imgMainHotizontal img {width: 100%;height: auto;}
+
+@media only screen and (max-width: 768px){
+	.gridGaleria{
+	display: grid;
+	grid-template-areas:
+	"logo"
+	"nav"
+	"encabezado"
+	"imgMainCuadradaIzq"
+	"imgMainCuadradaDer" 
+	"imagenVertical"
+	"imgMainHorizontal"
+	"footer";
+	grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+ }
+}
+.bgColorCo{
+	background-color: skyblue;
+}
